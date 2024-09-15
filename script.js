@@ -23,12 +23,21 @@ function numberPrompt() {
     const number = parseInt(userInput);
     console.log(number);
 
-    if (number) {
-      createGrid(number);
-    } else if (number > 100) {
+    if (number > 100) {
       alert("Please enter a number lower than 100.");
+    } else if (number) {
+      createGrid(number);
     } else {
       alert("Please enter a number.");
     }
   }
+}
+
+function colorSquare() {
+  let squares = document.querySelectorAll(".grid-item");
+  squares.forEach((square) => {
+    square.addEventListener("click", function () {
+      square.style.backgroundColor = "black";
+    });
+  });
 }
