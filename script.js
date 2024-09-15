@@ -15,3 +15,20 @@ function createGrid(size) {
     container.appendChild(div);
   }
 }
+
+function numberPrompt() {
+  const userInput = prompt("Please enter a number to choose grid size:");
+
+  if (userInput !== null) {
+    const number = parseInt(userInput);
+    console.log(number);
+
+    if (number) {
+      createGrid(number);
+    } else if (number > 100) {
+      alert("Please enter a number lower than 100.");
+    } else {
+      alert("Please enter a number.");
+    }
+  }
+}
