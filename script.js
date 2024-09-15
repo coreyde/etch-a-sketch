@@ -36,8 +36,12 @@ function numberPrompt() {
 function colorSquare() {
   let squares = document.querySelectorAll(".grid-item");
   squares.forEach((square) => {
-    square.addEventListener("click", function () {
+    square.addEventListener("mouseenter", function () {
       square.style.backgroundColor = "black";
     });
   });
+}
+
+function clearGrid() {
+  container.innerHTML = "";
 }
